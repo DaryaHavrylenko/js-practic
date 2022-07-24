@@ -178,7 +178,11 @@ console.log(hours);
     }
 }
 
-// var Valeri
+
+
+
+
+// var by Valeri
 // const userLogin = prompt('Please enter login');
 // const hours = new Date().getHours();
 // if (userLogin === '' || userLogin === null) {
@@ -211,3 +215,4 @@ console.log(hours);
 //     else { alert('Wrong password'); }
 // }
 // else { alert("I don't know you"); }
+
