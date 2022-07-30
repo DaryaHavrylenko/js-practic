@@ -202,7 +202,9 @@
 //Создайте ассоциативный массив (объект) заработных плат obj. Выведите на экран зарплату Пети и Коли.
 
 //Этот объект дан:
-var obj = { 'Коля': '1000', 'Вася': '500', 'Петя': '200' };
+// var obj = { 'Коля': '1000', 'Вася': '500', 'Петя': '200' };
 
-const result = Object.entries(obj).map(item => ({ name: item[0], salary: Number(item[1]) }));
-console.log(result);
+// const result = Object.entries(obj).map(item => ({ name: item[0], salary: Number(item[1]) }));
+// result.splice(1,1);
+// console.log(result);
+
