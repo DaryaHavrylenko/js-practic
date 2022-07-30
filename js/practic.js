@@ -127,59 +127,56 @@
 // 	For “Admin” show “Good evening, dear Admin!
 
 
-let userLogin = prompt("plese enter your login");
+// let userLogin = prompt("plese enter your login");
 
-console.log(userLogin);
+// console.log(userLogin);
 
-if (userLogin === "" || userLogin === null) {
-    alert('Canceled');
-} else if (userLogin.length < 4) {
-    let message = `I don't know any users having name length less than 4 symbols`;
-    alert(message);
-} else if (userLogin.toLowerCase() === "User".toLowerCase() || userLogin.toLowerCase() === "Admin".toLowerCase()) {
+// if (userLogin === "" || userLogin === null) {
+//     alert('Canceled');
+// } else if (userLogin.length < 4) {
+//     let message = `I don't know any users having name length less than 4 symbols`;
+//     alert(message);
+// } else if (userLogin.toLowerCase() === "User".toLowerCase() || userLogin.toLowerCase() === "Admin".toLowerCase()) {
     
-    let userPassword = prompt("Please enter your pasword");
-    if (userPassword === "" || !userPassword) {
-        alert('Canceled');
-    } else if (userLogin.toLowerCase() === "User".toLowerCase() && userPassword === "UserPass") {
-        console.log('user come in');
-    } else if (userLogin.toLowerCase() === "Admin".toLowerCase() && userPassword === "RootPass") {
-        console.log('admin come in');
-    } else {
-        alert('Wrong password');
-    }
-       }
-else {
-    let message = `I don’t know you`;
-    alert(message);
-}
+//     let userPassword = prompt("Please enter your pasword");
+//     if (userPassword === "" || !userPassword) {
+//         alert('Canceled');
+//     } else if (userLogin.toLowerCase() === "User".toLowerCase() && userPassword === "UserPass") {
+//         console.log('user come in');
+//     } else if (userLogin.toLowerCase() === "Admin".toLowerCase() && userPassword === "RootPass") {
+//         console.log('admin come in');
+//     } else {
+//         alert('Wrong password');
+//     }
+//        }
+// else {
+//     let message = `I don’t know you`;
+//     alert(message);
+// }
 
 
-if (userLogin.toLowerCase() === "User".toLowerCase()) {
-            const hours = new Date().getHours();
-console.log(hours);
-    if (hours > 5 && hours < 20) {
+// if (userLogin.toLowerCase() === "User".toLowerCase()) {
+//             const hours = new Date().getHours();
+// console.log(hours);
+//     if (hours > 5 && hours < 20) {
 
-    alert('Good day, dear User!');
-} else {
-   alert('Good evening, dear User!');
-    }
+//     alert('Good day, dear User!');
+// } else {
+//    alert('Good evening, dear User!');
+//     }
 
-}
+// }
 
-if (userLogin.toLowerCase() === "Admin".toLowerCase()) {
-            const hours = new Date().getHours();
-console.log(hours);
-    if (hours > 5 && hours < 20) {
-        alert('Good day, dear Admin!');
-    }
-    else {
-        alert('Good evening, dear Admin!');
-    }
-}
-
-
-
+// if (userLogin.toLowerCase() === "Admin".toLowerCase()) {
+//             const hours = new Date().getHours();
+// console.log(hours);
+//     if (hours > 5 && hours < 20) {
+//         alert('Good day, dear Admin!');
+//     }
+//     else {
+//         alert('Good evening, dear Admin!');
+//     }
+// }
 
 
 // var by Valeri
@@ -215,4 +212,151 @@ console.log(hours);
 //     else { alert('Wrong password'); }
 // }
 // else { alert("I don't know you"); }
+
+// practic 30.07.22
+
+// const users = [
+//     {
+//     id: "701b29c3-b35d-4cf1-a5f6-8b12b29a5081",
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     skills: ["ipsum", "lorem"],
+//     gender: "male",
+//     age: 37,
+//   },
+//   {
+//     id: "7a3cbd18-57a1-4534-8e12-1caad921bda1",
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     skills: ["tempor", "mollit", "commodo", "veniam", "laborum"],
+//     gender: "female",
+//     age: 34,
+//   },
+//   {
+//     id: "88beb2f3-e4c2-49f3-a0a0-ecf957a95af3",
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     skills: ["nulla", "anim", "proident", "ipsum", "elit"],
+//     gender: "male",
+//     age: 24,
+//   },
+// {
+//     id: "249b6175-5c30-44c6-b154-f120923736f5",
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     skills: ["adipisicing", "irure", "velit"],
+//     gender: "female",
+//     age: 21,
+//   },
+//   {
+//     id: "334f8cb3-eb04-45e6-abf4-4935dd439b70",
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong"],
+//     isActive: true,
+//     balance: 3951,
+//     skills: ["ex", "culpa", "nostrud"],
+//     gender: "male",
+//     age: 27,
+//   },
+//   {
+//     id: "150b00fb-dd82-427d-9faf-2879ea87c695",
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"],
+//     isActive: false,
+//     balance: 1498,
+//     skills: ["non", "amet", "ipsum"],
+//     gender: "male",
+//     age: 38,
+//   },
+// {
+//     id: "e1bf46ab-7168-491e-925e-f01e21394812",
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     skills: ["lorem", "veniam", "culpa"],
+//     gender: "female",
+//     age: 39,
+//   },
+
+// ]
+// let newObject = {};
+// const newKeys = Object.keys(users[0]);
+// const newValues = Object.values(users[0]);
+// // console.log(newValues);
+// // console.log(newKeys);
+// // newObject = { ...newKeys };
+// for (const key of newKeys) {
+//     newObject[key] = [];
+//     // console.log(key);
+   
+// }
+// // console.log(newObject);
+// for (const key in newObject) {
+//     // console.log(key);
+//     for (const user of users) {
+//         // console.log(user[key]);
+//         if (Array.isArray(user[key])) {
+//             newObject[key].push(...user[key]);
+//         } else {
+//            newObject[key].push(user[key]);
+//        }
+       
+//     }
+     
+// }
+
+// console.log(newObject);
+
+
+// task 2
+// Write a function that converts the argument values. If it will be a string, convert it to number and wise versa.
+// It should return an array of converted values.
+
+// const convert = (...args) =>
+//     args.map(arg =>
+//         typeof arg === 'string' ? Number(arg) : String(arg)
+// );
+
+// console.log(convert('1', 2, 3, '4'));
+// convert('1', 2, 3, '4') // [1, '2', '3', 4]
+
+// task 3
+
+// Write a function - positiveSum
+// It should accept an array of numbers and return a result of their addition. But you must calculate only positive numbers and omit negative if any presents.
+const positiveSum = (array) => 
+    array.filter(value => value >= 0)
+        .reduce((total, number) => 
+        total + number
+    , 0)
+
+
+// For example:
+console.log(positiveSum([2, 4, 6, 8]))  // => 20
+console.log(positiveSum([0, -3, 5, 7]))  // => 12
+
+
 
