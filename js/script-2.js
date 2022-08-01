@@ -46,12 +46,16 @@
 // for (const item of user) {
 //     if (item.name === 'Bob') {
 //         // console.log(`${item.name}`);
-//         console.log(item);
+//         // console.log(item);
 //         userBob = item;
 //     }
 // }
 // }
 // console.log('UserBob', userBob);
+
+// var2
+// const userBob = user.find(item => item.name === "Bob");
+// console.log(userBob);
 
 
 // task3
@@ -79,6 +83,13 @@
     
 //     console.log(user);
 // }
+
+// var2
+
+// user.splice(user.findIndex(item => item.name === 'Anna'), 1);
+
+
+// console.log(user);
 
 // TASK4
 // Отсортируйте массив объектов в пункте 2 по свойству age в порядке возрастания.
@@ -130,6 +141,10 @@
   
 //   return 0;
 // });
+// console.log(user);
+
+// var 3
+// user.sort((firstAge, secondAge) => firstAge.age - secondAge.age);
 // console.log(user);
 
 
@@ -208,3 +223,34 @@
 // result.splice(1,1);
 // console.log(result);
 
+// 31/07
+// var twoDigitSums = [];
+// for (var i = 1; i < 10; i++) {
+//   for (var j = 0; j < 10; j++) {
+//     twoDigitSums[i * 10 + j] = i + j;
+//   }
+// }
+
+// function sum(num) {
+//   return twoDigitSums[num];
+// }
+
+// console.log(sum(57));
+// console.log(sum(99));
+
+// function digitalRoot(n) {
+//     let number = ('' + n)
+//         .split('')
+//         .map(Number)
+//         .reduce((total, number) => (total += number), 0);
+//     console.log(number);
+    
+//     let numberLength = String(number).length;
+//     console.log(numberLength);
+
+//     number = ('' + number).
+
+
+// return number;
+// }
+// digitalRoot(16444);
