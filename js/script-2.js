@@ -223,34 +223,58 @@
 // result.splice(1,1);
 // console.log(result);
 
-// 31/07
-// var twoDigitSums = [];
-// for (var i = 1; i < 10; i++) {
-//   for (var j = 0; j < 10; j++) {
-//     twoDigitSums[i * 10 + j] = i + j;
+// task by Lera)
+// Описание задачи: Напишите функцию, которая проверяет, является ли элемент именно простым объектом, а не массивом, null и т.п.
+//   * Ожидаемый результат: true если это объект, false в противном случае. ({ a: 1 }) => true, ([1, 2, 3]) => false
+//   * Сложность задачи: 1 of 5
+
+
+
+
+// class User {
+//   static #takenEmails = [];
+
+//   static isEmailTaken(email) {
+//     return User.#takenEmails.includes(email);
+//   }
+
+//   #email;
+
+//   constructor({ email }) {
+//     this.#email = email;
+//     User.#takenEmails.push(email);
 //   }
 // }
 
-// function sum(num) {
-//   return twoDigitSums[num];
-// }
+// const mango = new User({ email: "mango@mail.com" });
 
-// console.log(sum(57));
-// console.log(sum(99));
-
-// function digitalRoot(n) {
-//     let number = ('' + n)
-//         .split('')
-//         .map(Number)
-//         .reduce((total, number) => (total += number), 0);
-//     console.log(number);
-    
-//     let numberLength = String(number).length;
-//     console.log(numberLength);
-
-//     number = ('' + number).
+// // console.log(User.isEmailTaken("poly@mail.com"));
+// console.log(User.isEmailTaken("mango@mail.com"));
 
 
-// return number;
-// }
-// digitalRoot(16444);
+
+class User {
+  constructor(email) {
+    this.email = email;
+  }
+
+  get email() {
+    return this.email;
+  }
+
+  set email(newEmail) {
+    this.email = newEmail;
+  }
+}
+
+class ContentEditor extends User {
+  constructor({ email, posts }) {
+    // Вызов конструктора родительского класса User
+    super(email);
+    this.posts = posts;
+  }
+}
+
+const editor = new ContentEditor({ email: "mango@mail.com", posts: [] });
+console.log(editor); // { email: 'mango@mail.com', posts: [] }
+console.log(editor.email); // 'mango@mail.com'
