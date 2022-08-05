@@ -223,58 +223,35 @@
 // result.splice(1,1);
 // console.log(result);
 
-// task by Lera)
+// task-1 by Lera)
 // Описание задачи: Напишите функцию, которая проверяет, является ли элемент именно простым объектом, а не массивом, null и т.п.
 //   * Ожидаемый результат: true если это объект, false в противном случае. ({ a: 1 }) => true, ([1, 2, 3]) => false
 //   * Сложность задачи: 1 of 5
 
-
-
-
-// class User {
-//   static #takenEmails = [];
-
-//   static isEmailTaken(email) {
-//     return User.#takenEmails.includes(email);
+// function isObject(arg) {
+//   if (arg === null) {
+//     return false;
 //   }
-
-//   #email;
-
-//   constructor({ email }) {
-//     this.#email = email;
-//     User.#takenEmails.push(email);
+//   if (Array.isArray(arg)) {
+//     return false;
+//   } else {
+//     return typeof arg === 'object';
 //   }
 // }
+// console.log(isObject({ a: 1 }));
 
-// const mango = new User({ email: "mango@mail.com" });
+// function isObject(arg) {
+// return arg !== null && !Array.isArray(arg) && typeof arg === "object";
+// }
+// console.log(isObject([1, 2, 3]));
 
-// // console.log(User.isEmailTaken("poly@mail.com"));
-// console.log(User.isEmailTaken("mango@mail.com"));
+// let isObject = (arg) => arg !== null && !Array.isArray(arg) && typeof arg === "object";
+
+// console.log(isObject([1, 2, 3]));
+// console.log(isObject({ a: 1 }));
 
 
-
-class User {
-  constructor(email) {
-    this.email = email;
-  }
-
-  get email() {
-    return this.email;
-  }
-
-  set email(newEmail) {
-    this.email = newEmail;
-  }
-}
-
-class ContentEditor extends User {
-  constructor({ email, posts }) {
-    // Вызов конструктора родительского класса User
-    super(email);
-    this.posts = posts;
-  }
-}
-
-const editor = new ContentEditor({ email: "mango@mail.com", posts: [] });
-console.log(editor); // { email: 'mango@mail.com', posts: [] }
-console.log(editor.email); // 'mango@mail.com'
+// tas-2 by Lera
+// Описание задачи: Напишите функцию, которая возвращает вложенный массив вида [[key, value], [key, value]].
+//   * Ожидаемый результат: ({ a: 1, b: 2 }) => [['a', 1], ['b', 2]]
+//   * Сложность задачи: 1 of 5
