@@ -136,14 +136,14 @@
 // } else if (userLogin.length < 4) {
 //     let message = `I don't know any users having name length less than 4 symbols`;
 //     alert(message);
-// } else if (userLogin.toLowerCase() === "User".toLowerCase() || userLogin.toLowerCase() === "Admin".toLowerCase()) {
+// } else if (userLogin === "User" || userLogin === "Admin") {
     
 //     let userPassword = prompt("Please enter your pasword");
 //     if (userPassword === "" || !userPassword) {
 //         alert('Canceled');
-//     } else if (userLogin.toLowerCase() === "User".toLowerCase() && userPassword === "UserPass") {
+//     } else if (userLogin === "User" && userPassword === "UserPass") {
 //         console.log('user come in');
-//     } else if (userLogin.toLowerCase() === "Admin".toLowerCase() && userPassword === "RootPass") {
+//     } else if (userLogin === "Admin" && userPassword === "RootPass") {
 //         console.log('admin come in');
 //     } else {
 //         alert('Wrong password');
@@ -155,7 +155,7 @@
 // }
 
 
-// if (userLogin.toLowerCase() === "User".toLowerCase()) {
+// if (userLogin === "User") {
 //             const hours = new Date().getHours();
 // console.log(hours);
 //     if (hours > 5 && hours < 20) {
@@ -167,7 +167,7 @@
 
 // }
 
-// if (userLogin.toLowerCase() === "Admin".toLowerCase()) {
+// if (userLogin === "Admin") {
 //             const hours = new Date().getHours();
 // console.log(hours);
 //     if (hours > 5 && hours < 20) {
@@ -177,6 +177,9 @@
 //         alert('Good evening, dear Admin!');
 //     }
 // }
+
+
+
 
 
 // var by Valeri
@@ -347,16 +350,181 @@
 
 // Write a function - positiveSum
 // It should accept an array of numbers and return a result of their addition. But you must calculate only positive numbers and omit negative if any presents.
-const positiveSum = (array) => 
-    array.filter(value => value >= 0)
-        .reduce((total, number) => 
-        total + number
-    , 0)
+// const positiveSum = (array) =>
+//     array.filter(value => value >= 0)
+//         .reduce((total, number) =>
+//         total + number
+//     , 0)
 
 
+// // For example:
+// console.log(positiveSum([2, 4, 6, 8]))  // => 20
+// console.log(positiveSum([0, -3, 5, 7]))  // => 12
+
+
+// 13.08
+// task 1
+// Write a function – letterCount
+// It accepts two string arguments and returns an integer of the count of occurrences the 2nd argument is found in the first one.
+// If no occurrences can be found, a count of 0 should be returned.
 // For example:
-console.log(positiveSum([2, 4, 6, 8]))  // => 20
-console.log(positiveSum([0, -3, 5, 7]))  // => 12
+// letterCount("Maggy", "g") // => 2
+// letterCount("Barry", "b") // => 1
+// letterCount("", "z")      // => 0
+
+// function letterCount(string, letter) {
+//   const  normalizeString = string.toLowerCase()
+//     const arrayString = normalizeString.split("")
+//         .filter((oneLetter) => letter === oneLetter).length;
+//     console.log(arrayString);
+//     return arrayString;
+//         }
+
+// letterCount("Maggy", "g");
+// letterCount("", "z");
+
+// var 2
+// function letterCount(string, letter) {
+//     const normalizeString = string.toLowerCase()
+//     const arrayString = normalizeString.split("")
+//         .reduce((totalLetter, oneLetter) => {
+//             if (letter === oneLetter) {
+//             totalLetter += 1;
+//         }
+            
+//             return totalLetter
+            
+//         , 0);
+//     console.log(arrayString);
+
+// }
+
+// letterCount("Maggy", "g");
+// letterCount("Barry", "b"); // => 1
+// letterCount("", "z"); // => 0
+
+// function letterCount(string, letter) {
+//   const normolizeString = string.toLowerCase();
+//   const arrayString = normolizeString
+//     .split("")
+//     .reduce((totalLetter, oneLetter) => {
+//       return letter === oneLetter ? totalLetter += 1 : totalLetter;
+//     }, 0);
+//   console.log(arrayString);
+// };
+
+// task 2
+// Our football team completed the championship. The result of each match look like "x:y".
+// Results of all matches are recorded in the collection like this: ["3:1", "2:2", "0:1", ...]
+ 
+// Write a function – countPoints
+// It should accept a collection of football games scores and count the points of our team in the championship.
+// Rules for counting points for each match:
+// • if x > y   - 3 points
+// • if x < y   - 0 point
+// • if x = y   - 1 point
+ 
+// For example:
+// countPoints(['3:1', '1:0', '0:0', '1:2', '4:0', '2:3', '1:1', '0:1', '2:1', '1:0']) // => 17
+// countPoints(['1:1', '1:2', '2:0', '4:2', '0:1', '2:3', '1:1', '0:1', '1:1', '3:0']) // => 12
 
 
+// Our football team completed the championship. The result of each match look like "x:y".
+// Results of all matches are recorded in the collection like this: ["3:1", "2:2", "0:1", ...]
+ 
+// Write a function – countPoints
+// It should accept a collection of football games scores and count the points of our team in the championship.
+// Rules for counting points for each match:
+// • if x > y   - 3 points
+// • if x < y   - 0 point
+// • if x = y   - 1 point
+ 
+// For example:
+// countPoints(['3:1', '1:0', '0:0', '1:2', '4:0', '2:3', '1:1', '0:1', '2:1', '1:0']) // => 17
+// countPoints(['1:1', '1:2', '2:0', '4:2', '0:1', '2:3', '1:1', '0:1', '1:1', '3:0']) // => 12
 
+// function countPoints(array = []) {
+  
+//     const newArray = (array.map(element => (element.split(":"))));
+//     let total = 0;
+//     for (let number of newArray) {
+        
+//         if (number[0] > number[1]) {
+//             total += 3;
+            
+//         } else if(number[0] === number[1]) {
+//             total += 1;
+//             }
+//        }
+//     // console.log(newArray);
+//     console.log(total);
+// return total;
+// }
+    
+// var 2
+// countPoints(['3:1', '1:0', '0:0', '1:2', '4:0', '2:3', '1:1', '0:1', '2:1', '1:0']) // => 17
+// countPoints(['1:1', '1:2', '2:0', '4:2', '0:1', '2:3', '1:1', '0:1', '1:1', '3:0'])
+// function countPoints(array = []) {
+  
+// //     const newTotal = (array.map(element => (element.split(":")))).reduce((total, number) => {
+// // if (number[0] > number[1]) {
+// //             total += 3;
+// //     // console.log(total);
+// //         } else if(number[0] === number[1]) {
+// //             total += 1;
+// //         }
+// //         return total;
+// //     }, 0)
+// //     console.log(newTotal);
+// //     return newTotal;
+// // }
+// var 3
+// function countPoints(array = []) {
+  
+//     const newTotal = (array.map(element => (element.split(":"))))
+//         .filter(number => number[0] > number[1]);
+//     const secondTotal = (array.map(element => (element.split(":"))))
+//         .filter(number => number[0] === number[1]);
+//     const total = newTotal.length * 3 + secondTotal.length;
+//     console.log(total);
+    
+// }
+
+// task3
+// function getSums(array = []) {
+//     let total = 0;
+//     let newArray = [];
+//     for (let arr of array) {
+//         total += arr;
+//         newArray.push(total);
+//     }
+//     console.log(newArray);
+//     return newArray;
+// }
+// getSums([1, 2, 3, 4, 5]);//[1, 3, 6, 10, 15]
+
+// var 2
+// function getSums(array = []) {
+//     const newArray = array.reduce((total, arr, index) => {
+//         if (index === 0) {
+//             total.push(arr);
+//             return total;
+//         } else {
+//             total[index] = total[index - 1] + arr;
+//             return total;
+//         }
+//         console.log(total);
+//     },[])
+//     console.log(newArray);
+// }
+
+// var 3
+function getSums(array = []) {
+	
+	const newArray = array.reduce((total, arr, index) => {
+		return index === 0 ? [arr] : [...total, total[index - 1] + arr];
+		// console.log(total);
+	}, []);
+	console.log(newArray);
+}
+getSums([1, 2, 3, 4, 5]); // [1, 3, 6, 10, 15]
