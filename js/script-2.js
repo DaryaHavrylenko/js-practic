@@ -1,4 +1,4 @@
-"use strict"
+'use strict';
 // task1
 // У нас есть следующий объект:
 
@@ -7,7 +7,6 @@
 //   age: 30
 // };
 // Проверьте, что этот объект не пустой и что в нем есть ключ age.
-
 
 // let user = {
 //     name: "John",
@@ -57,7 +56,6 @@
 // const userBob = user.find(item => item.name === "Bob");
 // console.log(userBob);
 
-
 // task3
 // Удалите из массива объектов (задание 2) объект с name == "Anna".
 // let user = [
@@ -80,14 +78,13 @@
 //         const indexItem = user.indexOf(item);
 //     user.splice(indexItem, 1);
 //     }
-    
+
 //     console.log(user);
 // }
 
 // var2
 
 // user.splice(user.findIndex(item => item.name === 'Anna'), 1);
-
 
 // console.log(user);
 
@@ -138,7 +135,7 @@
 //   if (a.age <= b.age) {
 //     return -1;
 //   }
-  
+
 //   return 0;
 // });
 // console.log(user);
@@ -146,7 +143,6 @@
 // var 3
 // user.sort((firstAge, secondAge) => firstAge.age - secondAge.age);
 // console.log(user);
-
 
 // autocheck 5/48
 // function calculateTotalPrice(orderedItems) {
@@ -162,7 +158,7 @@
 //     console.log(totalPrice);
 //    });
 //   return totalPrice;
-  
+
 // }
 // calculateTotalPrice([12, 85, 37, 4]);
 
@@ -250,10 +246,92 @@
 // console.log(isObject([1, 2, 3]));
 // console.log(isObject({ a: 1 }));
 
-
 // tas-2 by Lera
 // Описание задачи: Напишите функцию, которая возвращает вложенный массив вида [[key, value], [key, value]].
 //   * Ожидаемый результат: ({ a: 1, b: 2 }) => [['a', 1], ['b', 2]]
 //   * Сложность задачи: 1 of 5
+
+// DOM
+
+// НАВИГАЦИЯ ПО DOM
+// console.log(document);
+
+// const body = document.body;
+// console.log(body);
+
+// const list = body.firstElementChild;
+// console.log(list);
+
+// const firstListItem = list.firstElementChild;
+// console.log(firstListItem);
+
+// const listItems = list.children;
+// console.log(listItems);
+
+// ПОИСК ЭЛЕМЕНТОВ
+// const listWithId = document.querySelector('#menu');
+// listWithId.style.textTransform = 'uppercase';
+// listWithId.style.fontSize = '24px';
+// console.log(listWithId);
+
+// const listWithClass = document.querySelector('.menu');
+// console.log(listWithClass);
+
+// const menuItemsByTagName = document.querySelectorAll("li");
+// console.log(menuItemsByTagName);
+
+// const menuItemsByClass = document.querySelectorAll(".menu-item");
+// console.log(menuItemsByClass);
+
+// const firstMenuItem = document.querySelector(".menu-item");
+// firstMenuItem.style.color = 'tomato';
+// console.log(firstMenuItem);
+
+// 14/08
+// Задача 1. Напишите функцию, которая принимает 2 числа и возвращает 1, если первое число больше, чем второе; -1, если первое число меньше, чем второе, и 0, если числа равны.
+
+// Попробуйте реализовать эту функцию не только с помощью if...else, но и с помощью тернарного оператора, и в виде стрелочной функции.
+
+// function returnNumber(x, y) {
+//     if (x > y) {
+//         return '1';
+//     } else if(x < y) {
+//         return '-1';
+//     }
+//     return '0';
+// }
+// console.log(returnNumber(4, 1));
+
+// var 2
+
+// const returnNumber = (x, y) => {
+//         let z;
+//     if (x > y) {
+//         z = '1';
+//     } else if (y > x) {
+//         z = '-1';
+//     }
+//     return (x === y) ? '0' : z;
+// }
+
+// console.log (returnNumber(0, 4));
+
+// task 2
+// Обращаем массив вспять. Напишите две функции, reverseArray и reverseArrayInPlace.
+//  Первая получает массив как аргумент и выдаёт новый массив, с обратным порядком элементов.Вторая работает как оригинальный метод
+// reverse – она меняет порядок элементов на обратный в том массиве, который был ей передан в качестве аргумента.Не используйте
+//  стандартный метод reverse.
+
+// function reverseArray(array) {
+
+//     let a = [];
+//     for (let i = 0; i <= array.length - 1; i += 1) {
+//         a[i] = array[(array.length - 1) - i];
+//     }
+//     return a;
+// }
+
+//     console.log(reverseArray(['h', 'b', 'c', 'a']));
+
 
 
