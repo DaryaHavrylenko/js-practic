@@ -334,4 +334,55 @@
 //     console.log(reverseArray(['h', 'b', 'c', 'a']));
 
 
+// 28.08
+// Дана строка; нужно написать функцию, которая позволяет вернуть значение true, если строка является палиндромом, и false — если нет. При этом нужно учитывать пробелы и знаки препинания.
+
+
+// 18/09
+// task 1
+// Як знайти пропущене число у заданому масиві цілих чисел від 1 до 100?
+
+// const array = [1, 2, 3, 4, 6, 7, 8, 9, 10];
+
+// for (let i = 0; i < array.length - 1; i += 1) {
+//     // console.log(array[i]);
+//     if (array[i + 1] !== array[i] + 1) {
+// let missingNumber = array[i] + 1;
+//         console.log(missingNumber);
+       
+//     }
+// }
+
+// task 2
+// Як знайти число, що повторюється, в заданому масиві цілих чисел?
+// const array = [1, 2, 3, 3, 4, 6, 7, 7, 8, 9, 10];
+
+// for (let i = 0; i < array.length; i++) {
+//         for (let j = 0; j < i; j++)
+//         if (array[j] === array[i]) {
+//             console.log(array[i])
+//         }
+// }
+    
+// task 3
+
+// Як знайти найбільше та найменше число в невідсортованому масиві?
+// const array = [1, 2, 3, 4, 11, 8, 15, 20, 6, 7, 8, 9, 10];
+
+// console.log(Math.min(...array));
+// console.log(Math.max(...array));
+
+// task 4
+// Як знайти всі пари в масиві цілих чисел, сума яких дорівнює заданому числу?
+// const array = [1, 2, 3, 4, 11, 8, 15, 20, 6, 7, 8, 9, 10];
+// function findSumm(num) {
+//     for(let i = 0; i < array.length; i++) {
+//         for (let j = 0; j < i; j++)
+//         if (num === (array[j] + array[i])) {
+//             console.log(array[i], array[j])
+//         }
+// }
+// }
+    
+// findSumm(16);
 

@@ -620,7 +620,7 @@ function renderList() {
     })
 }
 renderList();
-function renderEdit() {
+function renderEdit(event) {
     const bookId = event.target.parentNode.id
     console.log(bookId);
     console.log('edit');
